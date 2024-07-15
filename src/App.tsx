@@ -1,12 +1,17 @@
-import Layout from "./Layout";
-import HomePage from "@/components/HomePage";
+import React from 'react';
+import { RouterProvider } from 'react-router-dom';
+import { ThemeProvider } from './contexts/ThemeContext';
+import { router } from './Router';
 
-function App() {
+const App: React.FC = () => {
+
+
   return (
-    <Layout>
-      <HomePage />
-    </Layout>
+    <ThemeProvider>
+      <RouterProvider router={router} />
+    </ThemeProvider>
   );
-}
+};
 
 export default App;
+
