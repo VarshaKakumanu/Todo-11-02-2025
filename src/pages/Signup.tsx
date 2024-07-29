@@ -24,7 +24,7 @@ const formSchema = z.object({
   firstName: z.string().min(2, "First name must be at least 2 characters").max(50, "First name must be at most 50 characters"),
   lastName: z.string().min(2, "Last name must be at least 2 characters").max(50, "Last name must be at most 50 characters"),
   email: z.string().email("Invalid email address"),
-  password: z.string().min(6, "Password must be at least 6 characters"),
+  password: z.string().min(4, "Password must be at least 6 characters"),
 });
 
 type FormData = z.infer<typeof formSchema>;
@@ -51,7 +51,7 @@ const SignUp = () => {
 
     try {
       const response = await axios.post(
-        "https://kb.etvbharat.com/keycloak/wp-json/users/v1/createUser",
+        "https://test.kb.etvbharat.com/wp-json/users/v1/createUser",
         {
           username: data.username,
           first_name: data.firstName,
