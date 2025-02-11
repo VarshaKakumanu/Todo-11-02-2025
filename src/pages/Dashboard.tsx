@@ -12,6 +12,9 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { Loader2 } from 'lucide-react';
 import { toast } from 'sonner';
+import { Form } from './Form';
+import List from './List';
+import { useSelector } from 'react-redux';
 // import { loggedIn } from "@/Redux/reducers/login";
 
 // Define the data type for articles
@@ -25,14 +28,18 @@ interface Article {
 export default function Dashboard() {
 
 
-
   return (
     <>
       <PageHeader>
         <PageHeaderHeading>Articles</PageHeaderHeading>
+
       </PageHeader>
       <div>
-        dashbord
+Add your name here to TODO List
+<Form />
+TODO List
+{" "}
+   <List /> 
       </div>
     </>
   );

@@ -5,3 +5,4 @@ export const UserLoggedIn = 'UserLoggedIn';
 export const articels = 'articels';
 export const UserDetailsUpdated = 'UserDetailsUpdated';
 export const loginData='loginData';
+export const testData= 'testData';
