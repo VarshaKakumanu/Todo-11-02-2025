@@ -16,7 +16,7 @@ const basename = "/";
 export const router = createBrowserRouter([
     {
         path: "/",
-        element: token? <Applayout /> : <Navigate to="/login" />,
+        element:  <Applayout /> ,
         children: [
             {
                 path: "",
