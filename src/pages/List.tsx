@@ -23,7 +23,7 @@ const List = () => {
         }
         setEditId(null);
         setEditText("");
-
+        toast("updated the TODO List!")
     }
   return (
     <div className="text-gray-900 bg-gray-200">
@@ -61,7 +61,11 @@ const List = () => {
                 </button>
 }
                 <button
-                onClick={()=>dispatch(deleteTodolist(item.id))}
+                onClick={()=>{
+              
+                    dispatch(deleteTodolist(item.id));
+                    toast("Deleted the User from TODO List!")
+                }}
                  className="bg-red-500 text-white px-2">Delete</button>
               </td>
             </tr>))} 

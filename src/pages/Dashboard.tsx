@@ -1,6 +1,5 @@
 import DOMPurify from 'dompurify';
 import { useEffect, useState } from "react";
-import { PageHeader, PageHeaderHeading } from "@/components/page-header";
 import {
   Card,
   CardDescription,
@@ -30,10 +29,7 @@ export default function Dashboard() {
 
   return (
     <>
-      <PageHeader>
-        <PageHeaderHeading>Articles</PageHeaderHeading>
 
-      </PageHeader>
       <div>
 Add your name here to TODO List
 <Form />

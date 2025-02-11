@@ -25,15 +25,11 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { useDispatch, useSelector } from "react-redux";
-import { loggedIn } from "@/Redux/reducers/login";
 
 export function Header() {
   const [open, setOpen] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
-  const dispatch = useDispatch();
-  const userDetails = useSelector((state: any) => state?.userDetails);
-  console.log(userDetails?.user_name, "userDetails");
 
   return (
     <header className="supports-backdrop-blur:bg-background/60 sticky top-0 z-50 w-full border-b bg-background/90 backdrop-blur">
@@ -226,7 +222,7 @@ export function Header() {
                   className="relative h-8 w-8 rounded-full"
                 >
                   <Avatar className="h-8 w-8">
-                    <AvatarFallback> {userDetails?.display_name?.slice(0, 2)}</AvatarFallback>
+                    <AvatarFallback>AN</AvatarFallback>
                   </Avatar>
                 </Button>
               </DropdownMenuTrigger>
@@ -234,10 +230,10 @@ export function Header() {
                 <DropdownMenuLabel className="font-normal">
                   <div className="flex flex-col space-y-1">
                     <p className="text-sm font-medium leading-none">
-                    {userDetails?.display_name?.split('@')[0]}
+                   ANNAY
                     </p>
                     <p className="text-xs leading-none text-muted-foreground">
-                      {userDetails?.display_name}
+                      anny@gmail.com
                     </p>
                   </div>
                 </DropdownMenuLabel>
@@ -245,8 +241,7 @@ export function Header() {
                 <DropdownMenuItem
                   onClick={() => {
                     localStorage.clear();
-                    dispatch(loggedIn(false));
-                    navigate("/login");
+                    navigate("/");
                   }}
                 >
                   Log out
