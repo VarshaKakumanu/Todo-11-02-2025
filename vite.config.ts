@@ -10,6 +10,7 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  base: "/Todo-11-02-2025/",
   build: {
     rollupOptions: {
         output:{
